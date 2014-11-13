@@ -18,12 +18,6 @@ module Scraper
 			# @today = Time.new.strftime("%m_%d_%y")
 			@today = '10_22_14'
 
-			Aws.config = {
-				:access_key_id => 'AKIAJIUOUDFM52G3UFRQ',
-				:secret_access_key => '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', 
-				:region => 'us-east-1'
-			}
-
 			@search_page_count = get_final_page_count.to_i
 		end#initialize
 
