@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-sdk-core (2.0.0.rc15)
+      builder (~> 3.0)
+      jamespath (~> 0)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
+    builder (3.2.2)
+    fileutils (0.7)
+      rmagick (>= 2.13.1)
+    jamespath (0.5.0)
+    mini_portile (0.6.0)
+    multi_json (1.10.1)
+    multi_xml (0.5.5)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    rmagick (2.13.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws-sdk-core
+  bundler
+  fileutils
+  nokogiri
