@@ -15,8 +15,7 @@ module Scraper
 			@estab_url = 'http://samhd.tx.gegov.com/San%20Antonio/'
 			@counter = 1
 			@start_number = 1
-			# @today = Time.new.strftime("%m_%d_%y")
-			@today = '10_22_14'
+			@today = Time.new.strftime("%m_%d_%y")
 
 			@search_page_count = get_final_page_count.to_i
 		end#initialize
