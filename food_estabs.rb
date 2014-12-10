@@ -162,22 +162,6 @@ module Scraper
 			end
 		end
 
-		def upload_s3
-			s3 = Aws::S3::Client.new
-
-			files = ['descs_tbl.csv', 'estabs_tbl.csv', 'inspections_tbl.csv']
-
-			files.each do |file|
-
-			resp = s3.put_object( 
-				:bucket => 'inspections-csvs',
-				:key => "#{@today}/#{file}",
-				:body => File.open("estab_inspecs/processed/#{today}/#{file}")
-				)
-			 
-			end
-		end
-
 
 		private 
 		def write_to_csv(data=[], header=[], file)
@@ -223,11 +207,6 @@ if __FILE__ == $0
   if cmd == 'process_estabs'
   	scraper = Scraper::FoodEstabs.new
   	scraper.process_estabs
-  end
-
-  if cmd == 'upload_s3'
-  	scraper = Scraper::FoodEstabs.new
-  	scraper.upload_s3
   end
 end
 
